@@ -58,6 +58,15 @@ tran[,date:=as.Date(as.character(date), format="%Y%m%d")]
 ## receiptNum가 "6998419"인 구매기록의 가격(amout)의 합은 얼마인가요?
 sum(tran[receiptNum=="6998419",amount])
 
+<<<<<<< HEAD
+=======
+tran %>%
+  filter(receiptNum=="6998419") %>%
+  select(amount) %>%
+  sum
+
+
+>>>>>>> 064d0b4f9eb5dfddd0eef7b929e283645c7b2018
 # #가장 비싼 item은 무엇인가요?
 
 # "select b.partner, b.cate_3, b.amount 
@@ -92,7 +101,12 @@ item %>%
 tar<-tran[amount==max(tran$amount),.(partner,cate_3)]
 item[partner==tar$partner&cate_3==tar$cate_3]
 
+<<<<<<< HEAD
 ## 사용자들이 가장 많이 사용한 체널은 mobile/app과 onlinemall 중에 무엇입니까?
+=======
+## 사용자들이 가장 많이 사용한 체널은 mobile/app과 
+## onlinemall 중에 무엇입니까?
+>>>>>>> 064d0b4f9eb5dfddd0eef7b929e283645c7b2018
 
 # sql 답
 # 조건을 줘서 각각 따로 계산함
@@ -114,6 +128,10 @@ chen[,che:=ifelse(grepl("APP",chennel),"mob","online")]
 chen[,sum(useCnt),by=.(che)]
 chen[,che:=NULL]
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 064d0b4f9eb5dfddd0eef7b929e283645c7b2018
 ## 월매출이 2015년 03월 가장 높은 매장의 storeCode는 무엇인가요?
 
 # sql 답
@@ -144,9 +162,17 @@ tar <-
 cust[cusID==tar,]
 
 # data.table 답
+<<<<<<< HEAD
 cust[cusID==comp[,.N,by=.(cusID)][N==max(N),cusID]]
 
 ## 한번에 3개 이상 구매한 경우에 가장 많이 구매에 포함된 제품 카테고리(cate_3)는 무엇입니까?
+=======
+tar<-comp[,.N,by=.(cusID)][N==max(N),cusID]
+cust[ cusID== tar]
+
+## 한번에 3개 이상 구매한 경우에 가장 많이 구매에 
+## 포함된 제품 카테고리(cate_3)는 무엇입니까?
+>>>>>>> 064d0b4f9eb5dfddd0eef7b929e283645c7b2018
 
 # dplyr tidyr 답
 devtools::install_github("tidyverse/dbplyr")
@@ -189,3 +215,18 @@ cid<-tar[,.N,by=.(cate_3)][order(N, decreasing = T)][1,cate_3]
 item[cate_3==cid]
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 064d0b4f9eb5dfddd0eef7b929e283645c7b2018
