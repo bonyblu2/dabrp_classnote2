@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .Rproj.user
 .Rhistory
 .RData
@@ -8,7 +9,18 @@ recomen/chennel.csv
 run_sam.R
 *cache*
 .httr-oauth
-assign5.R
 practice.R
-assign3.R
-codeForClass4.R
+=======
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+recomen/tran.csv
+gsql.RData
+recomen/chennel.csv
+run_sam.R
+*cache*
+.httr-oauth
+assign6.R
+*ggsave*
+>>>>>>> 6a0ae44a00ca4979183b2abc9bb417828e11f543
