@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .Rproj.user
 .Rhistory
 .RData
@@ -10,7 +9,6 @@ run_sam.R
 *cache*
 .httr-oauth
 practice.R
-=======
 .Rproj.user
 .Rhistory
 .RData
@@ -22,5 +20,5 @@ run_sam.R
 *cache*
 .httr-oauth
 assign6.R
-*ggsave*
->>>>>>> 6a0ae44a00ca4979183b2abc9bb417828e11f543
+
+
