@@ -353,7 +353,7 @@ kable(dat,align="cl", "html")
 ```
 ]
 .pull-right[
-```{R results="asis", echo=F}
+```{R results="asis"}
 if(!require(knitr)) install.packages("knitr")    
 library(knitr)    
 obj<-c("소스코드","텍스트","플롯","메세지","경고")
